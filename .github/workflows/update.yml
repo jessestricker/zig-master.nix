@@ -1,0 +1,42 @@
+name: Update
+
+on: workflow_dispatch
+
+jobs:
+  check:
+    name: Check for new version
+    outputs:
+      update_available: ${{ steps.check.outputs.update_available }}
+    steps:
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      - run: .github/workflows/check_update_available.bash
+        id: check
+      - uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
+        if: ${{ steps.check.outputs.update_available }}
+        with:
+          name: index.json
+          path: index.json
+
+  test:
+    name: Build and test Nix flake
+    needs: check
+    if: ${{ needs.check.outputs.update_available }}
+    steps:
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+        with:
+          name: index.json
+      - uses: cachix/install-nix-action@d64e0553100205688c0fb2fa16edb0fc8663c590
+      - run: nix build -L -v .
+      - run: nix flake check -L -v .
+
+  deploy:
+    name: Commit, tag and push changes
+    needs: [check, test]
+    if: ${{ needs.check.outputs.update_available }}
+    steps:
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+        with:
+          name: index.json
+      - run: .github/workflows/deploy_update.bash
