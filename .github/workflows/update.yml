@@ -22,7 +22,10 @@ jobs:
     name: Build and test Nix flake
     needs: check
     if: ${{ needs.check.outputs.update_available == 'true' }}
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu, macos]
+    runs-on: ${{ matrix.os }}-latest
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
