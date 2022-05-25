@@ -22,11 +22,11 @@
     # The list of nixpkgs systems this flake supports.
     supportedSystems = builtins.attrNames systemToZigTarget;
 
-    # The download index from the Zig website.
+    # The relevant section of the download index from the Zig website.
     index = builtins.fromJSON (builtins.readFile ./index.json);
 
     # The current version of Zig provided by this flake.
-    zigVersion = index.master.version;
+    zigVersion = index.version;
   in
     # Build the outputs for each supported system.
     flake-utils.lib.eachSystem supportedSystems (system: let
@@ -36,7 +36,7 @@
       zigTarget = systemToZigTarget.${system};
 
       # Build the derivation's source information.
-      zigTargetIndex = index.master.${zigTarget};
+      zigTargetIndex = index.${zigTarget};
       zigTarball = {
         url = zigTargetIndex.tarball;
         sha256 = zigTargetIndex.shasum;
