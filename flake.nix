@@ -1,4 +1,6 @@
 {
+  description = "The pre-built master release of the Zig language and toolchain";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
