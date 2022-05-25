@@ -4,11 +4,17 @@ set -euo pipefail
 INDEX_URL='https://ziglang.org/download/index.json'
 
 current_version=$(jq -r '.version' index.json)
+current_date=$(jq -r '.date' index.json)
+
 curl -s "$INDEX_URL" | jq '.master' > index.json
-latest_version=$(jq -r '.version' index.json)
 
-echo "current: ${current_version}"
-echo " latest: ${current_version}"
+updated_version=$(jq -r '.version' index.json)
+updated_date=$(jq -r '.date' index.json)
 
-update_available=$([[ "$current_version" != "$latest_version" ]] && echo 'true' || echo 'false')
+update_available=$([[ "$current_version" != "$updated_version" ]] && echo 'true' || echo 'false')
 echo "::set-output name=update_available::${update_available}"
+
+echo "# Summary" >> $GITHUB_STEP_SUMMARY
+echo "* current: ${current_version} (${current_date})" >> $GITHUB_STEP_SUMMARY
+echo "* updated: ${updated_version} (${updated_date})" >> $GITHUB_STEP_SUMMARY
+echo "update available: ${update_available}" >> $GITHUB_STEP_SUMMARY
