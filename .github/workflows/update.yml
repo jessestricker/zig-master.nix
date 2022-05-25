@@ -42,4 +42,7 @@ jobs:
       - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
         with:
           name: index.json
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
       - run: .github/workflows/deploy_update.bash
