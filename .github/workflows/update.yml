@@ -7,6 +7,7 @@ jobs:
     name: Check for new version
     outputs:
       update_available: ${{ steps.check.outputs.update_available }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - run: .github/workflows/check_update_available.bash
@@ -21,6 +22,7 @@ jobs:
     name: Build and test Nix flake
     needs: check
     if: ${{ needs.check.outputs.update_available }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
@@ -34,6 +36,7 @@ jobs:
     name: Commit, tag and push changes
     needs: [check, test]
     if: ${{ needs.check.outputs.update_available }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
