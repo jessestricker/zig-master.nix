@@ -49,6 +49,6 @@ jobs:
         with:
           name: index.json
       - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name GitHub
+          git config user.email noreply@github.com
       - run: .github/workflows/deploy_update.bash
