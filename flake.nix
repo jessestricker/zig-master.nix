@@ -66,5 +66,13 @@
 
       # nix fmt
       formatter = pkgs.alejandra;
-    });
+    })
+    # Append non-system-specific attributes to output set.
+    // {
+      # nix flake init
+      templates.default = {
+        path = ./template;
+        description = "A development environment with the latest Zig master release.";
+      };
+    };
 }
