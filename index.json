@@ -1,51 +1,51 @@
 {
-  "version": "0.11.0-dev.866+f24c77fc4",
-  "date": "2022-12-18",
+  "version": "0.11.0-dev.891+3bfae2a0d",
+  "date": "2022-12-19",
   "docs": "https://ziglang.org/documentation/master/",
   "stdDocs": "https://ziglang.org/documentation/master/std/",
   "src": {
-    "tarball": "https://ziglang.org/builds/zig-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "0db2e26e73db554228830198a74e91cc6701dbbb1b75cd55722f6f7c2f01e07f",
-    "size": "15323260"
+    "tarball": "https://ziglang.org/builds/zig-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "e69736623eb9a0ce882bd4fc3bf05420c1a7af4ea1fce594a77342848d385862",
+    "size": "15329816"
   },
   "x86_64-macos": {
-    "tarball": "https://ziglang.org/builds/zig-macos-x86_64-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "47bbfa292f3259d417afaef1b0ffb6546337e46d868172e34f6bdcf9addce936",
-    "size": "44755052"
+    "tarball": "https://ziglang.org/builds/zig-macos-x86_64-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "c25a3bac2012834fae588897f6e6ba4f2ab2439de2d73e2d12861c756aa91c2b",
+    "size": "44718964"
   },
   "aarch64-macos": {
-    "tarball": "https://ziglang.org/builds/zig-macos-aarch64-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "ce8289a7495c976418d4794635e8c7bb040a9d8d908df790bf82eec092785158",
-    "size": "40284164"
+    "tarball": "https://ziglang.org/builds/zig-macos-aarch64-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "bc2b5b1edce3af1aa436009988fe7161652663df9b4688b87fd12fa3b8204247",
+    "size": "40277316"
   },
   "x86_64-windows": {
-    "tarball": "https://ziglang.org/builds/zig-windows-x86_64-0.11.0-dev.866+f24c77fc4.zip",
-    "shasum": "ba825b48dd639731f0985b9402cf13c10c18b47c6c28ba6466bace5435162551",
-    "size": "73561156"
+    "tarball": "https://ziglang.org/builds/zig-windows-x86_64-0.11.0-dev.891+3bfae2a0d.zip",
+    "shasum": "73366b1b6c5374a6f831523a317af148587a3721a3f3f8f3936f35ec34213343",
+    "size": "73575863"
   },
   "x86_64-linux": {
-    "tarball": "https://ziglang.org/builds/zig-linux-x86_64-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "d762183d00ee2d884a7569c770e0854f6abc023261f8fbf0c0980e4a8c5dbc9e",
-    "size": "43684632"
+    "tarball": "https://ziglang.org/builds/zig-linux-x86_64-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "61ccb881f34f5637266b09a3db2de1147969f01fd806977bc80f63a39e28df5b",
+    "size": "43695572"
   },
   "aarch64-linux": {
-    "tarball": "https://ziglang.org/builds/zig-linux-aarch64-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "6edc74bdf7c372726b19ec42dd7990c0304a09e72019ac51da8f8138402c1f83",
-    "size": "40002956"
+    "tarball": "https://ziglang.org/builds/zig-linux-aarch64-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "0c83eab25d277caa0d5702010d92749b90c006ab6550360be57d2b0166c07344",
+    "size": "40008564"
   },
   "aarch64-windows": {
-    "tarball": "https://ziglang.org/builds/zig-windows-aarch64-0.11.0-dev.866+f24c77fc4.zip",
-    "shasum": "cc881cb3ba27fb0b55d1c211b01f069b096dccee75d708895d81a8fe2408bc3d",
-    "size": "69701260"
+    "tarball": "https://ziglang.org/builds/zig-windows-aarch64-0.11.0-dev.891+3bfae2a0d.zip",
+    "shasum": "a80aa006ebf8f6c46ec7eda3af3b1f7f59f59b28fcad912797d0f0098a9d0f80",
+    "size": "69720783"
   },
   "riscv64-linux": {
-    "tarball": "https://ziglang.org/builds/zig-linux-riscv64-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "194010c9156de4f5bada4933499098fcf0a0e756d696abe8c1f7b1573f8ecef7",
-    "size": "41856176"
+    "tarball": "https://ziglang.org/builds/zig-linux-riscv64-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "1b4df995d557cc9fe9bc1c148ff23baa0fd930e6467f9c2a534f8c52187dddb2",
+    "size": "41869356"
   },
   "x86-linux": {
-    "tarball": "https://ziglang.org/builds/zig-linux-x86-0.11.0-dev.866+f24c77fc4.tar.xz",
-    "shasum": "3b4a60195fc9d97ba730b23fe0a10a36c8d2b435d990f1ba104a9965adbf8255",
-    "size": "47940356"
+    "tarball": "https://ziglang.org/builds/zig-linux-x86-0.11.0-dev.891+3bfae2a0d.tar.xz",
+    "shasum": "cf6b2c0c33b7ffadeaff46e4004ad940f06ea66acb3c60a8fdbad06c38c14b7f",
+    "size": "47947172"
   }
 }
