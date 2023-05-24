@@ -34,7 +34,7 @@ jobs:
       - uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
         with:
           name: index.json
-      - uses: cachix/install-nix-action@29bd9290ef037a3ecbdafe83cbd2185e9dd0fa0a
+      - uses: cachix/install-nix-action@4b933aa7ebcc94a6174cf1364864e957b4910265
       - run: nix build -L -v .
       - run: nix flake check -L -v .
 
