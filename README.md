@@ -1,5 +1,11 @@
 # zig-master.nix
 
+> **Warning**
+>
+> This project has been deprecated! If you are looking for an alternative, I recommend [zig-overlay](https://github.com/mitchellh/zig-overlay).
+
+## Description
+
 A Nix flake providing pre-built master releases of the Zig programming language
 and toolchain.
 
